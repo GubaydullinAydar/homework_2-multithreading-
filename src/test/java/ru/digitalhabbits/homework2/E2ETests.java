@@ -1,15 +1,13 @@
 package ru.digitalhabbits.homework2;
 
-import static com.google.common.io.Resources.getResource;
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.entry;
-
 import org.junit.jupiter.api.Test;
+import ru.digitalhabbits.homework2.impl.AsyncFileLetterCounter;
 
-import java.io.File;
 import java.util.Map;
 
-import ru.digitalhabbits.homework2.impl.AsyncFileLetterCounter;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.entry;
+import static ru.digitalhabbits.homework2.FileUtils.getFile;
 
 public class E2ETests {
 
@@ -28,9 +26,5 @@ public class E2ETests {
                 entry('e', 2731L),
                 entry('f', 2629L)
         );
-    }
-
-    private File getFile(String name) {
-        return new File(getResource(name).getPath());
     }
 }
